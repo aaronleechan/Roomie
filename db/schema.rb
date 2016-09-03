@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160903014511) do
+ActiveRecord::Schema.define(version: 20160903132022) do
+
+  create_table "updateinformations", force: :cascade do |t|
+    t.string  "firstName"
+    t.string  "lastName"
+    t.string  "school"
+    t.integer "year"
+    t.string  "gradSeason"
+    t.integer "gradYear"
+    t.string  "gender"
+    t.date    "birthdate"
+    t.string  "hasPlace"
+    t.string  "shared"
+    t.integer "budget"
+    t.integer "organization"
+    t.integer "cleanliness"
+    t.integer "party"
+    t.integer "drink"
+    t.boolean "drugs"
+    t.boolean "smoking"
+    t.integer "outgoing"
+    t.integer "numLogIns"
+    t.integer "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
